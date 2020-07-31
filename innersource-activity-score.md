@@ -38,7 +38,9 @@ Such "soft" KPIs would have to be manually or semi-automatically added to the ca
 ## Solutions
 
 The InnerSource activity score can be derived automatically from common parameters like GitHub stars, watches, and forks. In addition, it considers activity parameters like last update and creation date of the repo to give young projects with a lot of traction a boost.
-Projects with contributing guidelines and issues (public backlog) may get a higher ranking. All of this can be fetched and calculated automatically using the GitHub API (see [reference implementation](TODO) below). Manual adjustments can be made on top if needed.
+Projects with contributing guidelines and issues (public backlog) may get a higher ranking.
+
+All of this can be fetched and calculated automatically using the GitHub API (see [reference implementation](TODO) below). The code below assumes the variable `repo` contains an entity fetched from the GitHub API. Manual adjustments can be made on top if needed.
 
 ``` javascript
 // calculate a virtual InnerSource score from stars, watches, commits, and issues
