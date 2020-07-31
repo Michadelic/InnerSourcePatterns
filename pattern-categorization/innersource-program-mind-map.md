@@ -31,5 +31,6 @@
 ### Discovery challenges
 #### Can't find matching projects
 ##### [Gig market (P)](https://github.com/InnerSourceCommons/InnerSourcePatterns/blob/master/gig-marketplace.md)
-##### [IS portal (P)](https://github.com/InnerSourceCommons/InnerSourcePatterns/blob/master/innersource-portal.md)
+##### [IS portal (P)](https://github.com//InnerSourceCommons/InnerSourcePatterns/blob/master/innersource-portal.md)
+##### [IS activity score (P)](https://github.com//InnerSourceCommons/InnerSourcePatterns/blob/master/innersource-activity-score.md)
 ## Scale
