@@ -2,7 +2,7 @@
 InnerSource Activity Score
 
 ## Patlet
-The InnerSource activity score is a numeric value that represents the (GitHub) activity of an InnerSource project. It can be used to create a ranked list of projects for the [InnerSource portal](innersource-portal.md) so that potential contributors can easily find the most active projects. It is derived automatically from GitHub repository statistics and may be enriched with manual evaluations. 
+The InnerSource activity score is a numeric value that represents the (GitHub) activity of an InnerSource project. It can be used to create a ranked list of projects for the [InnerSource portal](innersource-portal.md) so that potential contributors can easily find the most active projects. It is derived automatically from GitHub repository statistics and may be enriched with KPIs from other tools or manual evaluations. 
 
 ## Problem
 
