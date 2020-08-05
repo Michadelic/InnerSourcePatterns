@@ -44,9 +44,11 @@ The repository activity score is a numeric value that represents the (GitHub) ac
 In addition, it considers activity parameters like last update and creation date of the repo to give young projects with a lot of traction a boost.
 Projects with contributing guidelines and issues (public backlog) receive a higher ranking as well.
 
-All of this can be fetched and calculated automatically using the result set of the [GitHub search API](https://developer.github.com/v3/search/#search-repositories) and [GitHub statistics API](https://developer.github.com/v3/repos/statistics/). The code below assumes the variable `repo` contains an entity fetched from the GitHub `search` API and the `participation` object contains an entity from the GitHub `stats/participation` API.
+All of this can be fetched and calculated automatically using the result set of the [GitHub search API](https://developer.github.com/v3/search/#search-repositories) and [GitHub statistics API](https://developer.github.com/v3/repos/statistics/). Other code versioning systems like BitBucket, Gitlab, Gerrit can be integrated as well if a similar API is available.
+
+The code below assumes the variable `repo` contains an entity fetched from the GitHub `search` API and the `participation` object contains an entity from the GitHub `stats/participation` API.
  
-Manual adjustments according to soft KPIs (see [forces](#forces)) can be made on top if needed.
+Manual adjustments according to soft KPIs (see [forces](#forces)) can be made on top if needed. 
 
 ``` javascript
 // calculate a virtual InnerSource score from stars, watches, commits, and issues
