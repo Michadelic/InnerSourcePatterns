@@ -55,7 +55,7 @@ possible to either deploy the same service in independent environments with sepa
 * [Start as Experiment](start-as-experiment.md) - *An inner source initiative is considered but not started, because management is unsure about its outcome and therefore unwilling to commit to the investment.*
 * [Include Product Owners](https://github.com/InnerSourceCommons/InnerSourcePatterns/pull/71) - *Key Performance Indicators (KPIs) for Product Owners are primarily product focused, and don't consider areas such as collaborative development. This results in a lower level of engagement with inner source projects.*
 * [Provide standard base documentation through a README](project-setup/base-documentation.md)
-* [InnerSource Activity Score](innersource-activity-score.md) - The InnerSource activity score is a numeric value that represents the (GitHub) activity of an InnerSource project.
+* [Repository Activity Score](repository-activity-score.md) - The reository activity score is a numeric value that represents the (GitHub) activity of an InnerSource project.
 
 ### Pattern Ideas (not yet proven; brainstormed)
 
