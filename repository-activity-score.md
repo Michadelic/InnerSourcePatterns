@@ -63,12 +63,12 @@ function calculateScore(repo) {
     let iAverageCommitsPerWeek = repo._InnerSourceMetadata.participation.slice(repo._InnerSourceMetadata.participation - 13).reduce((a, b) => a + b) / 13;
     iScore = iScore * (1 + (Math.min(Math.max(iAverageCommitsPerWeek - 3, 0), 7)) / 7);
     // boost calculation:
-    //all repositories updated in the previous will receive a boost of maximum 1000
+    // all repositories updated in the previous year will receive a boost of maximum 1000
     let iBoost = (1000 - Math.min(iDaysSinceLastUpdate, 365) * 2.74);
     // gradually scale down boost according to repository creation date to mix with "real" engagement stats
     let iDaysSinceCreation = (new Date().getTime() - new Date(repo.created_at).getTime()) / 1000 / 86400;
     iBoost *= (365 - Math.min(iDaysSinceCreation, 365)) / 365;
-    // new repos (created in the last 365 days) that have been updated recently (in the last 30/90 days) receive a boost of up to 1000/500
+    // new repos updated recently (in the last 30/90 days) receive a boost of up to 1000/500
     // new repos that have not been updated in the last 90 days get a boost of up to 250
     iScore += (iDaysSinceLastUpdate < 30 ? iBoost : (iDaysSinceLastUpdate < 90 ? iBoost * 0.5 : iBoost * 0.25));
     // give projects with contribution guidelines (CONTRIBUTING.md) file a static boost of 100
