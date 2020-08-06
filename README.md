@@ -42,7 +42,7 @@ possible to either deploy the same service in independent environments with sepa
 
 * [Modular Code](modular-code.md) - *Management does not want to spend the extra resources needed to develop modular components and make them available in a visible repository for others to use.*
 * [Improve Findability](improve-findability.md) - *People can't find the internally developed solutions that they need due to poor naming conventions. This causes frustration in finding inner source solutions and a reduction in code reuse.*
-* [Repository Activity Score](repository-activity-score.md) - The repository activity score is a numeric value that represents the (GitHub) activity of an InnerSource project.
+* [Repository Activity Score](repository-activity-score.md) - *The repository activity score is a numeric value that represents the (GitHub) activity of an InnerSource project.*
 
 ### Pattern Drafts (proven, not yet fully reviewed)
 
