@@ -36,11 +36,13 @@ The below lists all known patterns. They are grouped into four stages of maturit
 * [Service vs. library: It's inner source, not inner deployment](service-vs-library.md) - *Teams in a DevOps environment may be reluctant to work across team boundaries on common code bases due to ambiguity over who will be responsible for responding to service downtime. The solution is to realize that often it's
 possible to either deploy the same service in independent environments with separate escalation chains in the event of service downtime or factor a lot of shared code out into one library and collaborate on that.*
 * [Trusted Committer](project-roles/trusted-committer.md) - *Many inner-source projects will find themselves in a situation where they consistently receive feedback, features, and bug-fixes from contributors. In these situations project maintainers seek ways to recognize and reward the work of the contributor above and beyond single contributions.*
+* [Repository Activity Score](repository-activity-score.md) - The repository activity score is a numeric value that represents the (GitHub) activity of an InnerSource project.
 
 ### Reviewed Pattern Ideas (not yet proven but reviewed)
 
 * [Modular Code](modular-code.md) - *Management does not want to spend the extra resources needed to develop modular components and make them available in a visible repository for others to use.*
 * [Improve Findability](improve-findability.md) - *People can't find the internally developed solutions that they need due to poor naming conventions. This causes frustration in finding inner source solutions and a reduction in code reuse.*
+* [Repository Activity Score](repository-activity-score.md) - The repository activity score is a numeric value that represents the (GitHub) activity of an InnerSource project.
 
 ### Pattern Drafts (proven, not yet fully reviewed)
 
@@ -55,7 +57,6 @@ possible to either deploy the same service in independent environments with sepa
 * [Start as Experiment](start-as-experiment.md) - *An inner source initiative is considered but not started, because management is unsure about its outcome and therefore unwilling to commit to the investment.*
 * [Include Product Owners](https://github.com/InnerSourceCommons/InnerSourcePatterns/pull/71) - *Key Performance Indicators (KPIs) for Product Owners are primarily product focused, and don't consider areas such as collaborative development. This results in a lower level of engagement with inner source projects.*
 * [Provide standard base documentation through a README](project-setup/base-documentation.md)
-* [Repository Activity Score](repository-activity-score.md) - The reository activity score is a numeric value that represents the (GitHub) activity of an InnerSource project.
 
 ### Pattern Ideas (not yet proven; brainstormed)
 
