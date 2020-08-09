@@ -89,6 +89,7 @@ function calculateScore(repo) {
 
 ## Resulting Context
 
+
 Contributors are free to commit a part of their time to InnerSource project. They may choose to contribute to a project that they depend on for the work in their regular team anyways. However they may also choose to contribute to something completely different, based on their interests and personal development goals.
 
 Projects can be sorted and presented by repository activity score to give a meaningful order in a portal presenting projects to potential new contributors. The score can be calculated on the fly or in a background job that evaluates all projects on a regular basis and stores a list of results.
@@ -105,7 +106,8 @@ Used in SAP's InnerSource project portal to define the default order of the Inne
 
 When proposed to InnerSourceCommons in July 2020, this pattern emerged.
 
-## Status (optional until merging)
+## Status
+
 
 * First Draft: 30th July 2020  
 * Second Draft: 5th August 2020  
@@ -115,6 +117,6 @@ When proposed to InnerSourceCommons in July 2020, this pattern emerged.
 
 [Michael Graf (SAP)](mi.graf@sap.com)
 
-## Acknowledgements (optional)
+## Acknowledgements
 
 Thank you to the InnerSource Commons Community for lightning-fast advice, and a lot of helpful input to feed this pattern!
