@@ -35,7 +35,7 @@ Such "soft" KPIs would have to be manually or semi-automatically added to the ca
 
 ## Sketch
 
-![Ecosystem for the Repository Activity Score](assets/img/repository_activity_score.png)
+![Ecosystem for the Repository Activity Score](../../assets/img/repository_activity_score.png)
 
 A centralized approach for calculating an applying the repository activity score. For more details, see [Resulting Context](#resulting-context)
 
@@ -61,9 +61,13 @@ function calculateScore(repo) {
     let iDaysSinceLastUpdate = (new Date().getTime() - new Date(repo.updated_at).getTime()) / 1000 / 86400;
     // updated in last 3 months: adds a bonus multiplier between 0..1 to overall score (1 = updated today, 0 = updated more than 100 days ago)
     iScore = iScore * (1 + (100 - Math.min(iDaysSinceLastUpdate, 100)) / 100);
-    // average commits (based on participation stats) in last 3 months: adds a bonus multiplier between 0..1 to overall score (1 = >10 commits per week, 0 = less than 3 commits per week)
-    let iAverageCommitsPerWeek = repo._InnerSourceMetadata.participation.slice(repo._InnerSourceMetadata.participation - 13).reduce((a, b) => a + b) / 13;
-    iScore = iScore * (1 + (Math.min(Math.max(iAverageCommitsPerWeek - 3, 0), 7)) / 7);
+    // evaluate participation stats for the previous  3 months
+    repo._InnerSourceMetadata = repo._InnerSourceMetadata || {};
+    if (repo._InnerSourceMetadata.participation) {
+        // average commits: adds a bonus multiplier between 0..1 to overall score (1 = >10 commits per week, 0 = less than 3 commits per week)
+        let iAverageCommitsPerWeek = repo._InnerSourceMetadata.participation.slice(repo._InnerSourceMetadata.participation - 13).reduce((a, b) => a + b) / 13;
+        iScore = iScore * (1 + (Math.min(Math.max(iAverageCommitsPerWeek - 3, 0), 7)) / 7);
+    }
     // boost calculation:
     // all repositories updated in the previous year will receive a boost of maximum 1000 declining by days since last update
     let iBoost = (1000 - Math.min(iDaysSinceLastUpdate, 365) * 2.74);
@@ -81,7 +85,6 @@ function calculateScore(repo) {
     // final score is a rounded value starting from 0
     iScore = Math.round(iScore - 1);
     // add score to metadata on the fly
-    repo._InnerSourceMetadata = repo._InnerSourceMetadata || {};
     repo._InnerSourceMetadata.score = iScore;
     return iScore;
 }
@@ -115,6 +118,10 @@ When proposed to InnerSourceCommons in July 2020, this pattern emerged.
 
 [Michael Graf (SAP)](mi.graf@sap.com)
 
-## Acknowledgements (optional)
+## Acknowledgements
 
-Thank you to the InnerSource Commons Community for lightning-fast advice, and a lot of helpful input to feed this pattern!
+Thank you to the InnerSource Commons Community for lightning-fast advice, and a lot of helpful input to feed this pattern! Especially:
+* Johannes Tigges
+* Sebastian Spier 
+* Maximilian Capraro 
+* Tim Yao
